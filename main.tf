@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.19.0"
+  version = "5.5.2"
 
   name                 = "${var.rds_instance_name}-vpc"
   cidr                 = "10.0.0.0/16"

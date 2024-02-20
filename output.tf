@@ -1,5 +1,10 @@
 output "rds_instance" {
   value = aws_db_instance.mz_rds_demo_db
+  sensitive = true
+}
+
+output "vpc" {
+  value = module.vpc
 }
 
 output "mz_rds_details" {
