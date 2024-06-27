@@ -40,8 +40,7 @@ output "mz_rds_details" {
     -- 3. Create a source
     CREATE SOURCE mz_source
         FROM POSTGRES CONNECTION pg_connection (PUBLICATION 'mz_source')
-        FOR ALL TABLES
-        WITH (SIZE = '2xsmall');
+        FOR ALL TABLES;
 
     -- 4. Query the source
     SELECT * FROM test_table;
